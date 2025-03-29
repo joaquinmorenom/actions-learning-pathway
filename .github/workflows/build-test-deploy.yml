@@ -61,10 +61,11 @@ jobs:
       - name: Check if output directory exists
         run: ls -la ./out
         
-      - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
         with:
-          path: "./out"
+          name: my-artifact
+          path: ./out
           
       - name: deploy
         id: deployment
