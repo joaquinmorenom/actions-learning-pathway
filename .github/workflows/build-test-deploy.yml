@@ -57,9 +57,7 @@ jobs:
 
       - run: npm install
       - run: npm run build
-      
-      - name: Check if output directory exists
-        run: ls -la ./out
+      - run: npm run export
         
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
