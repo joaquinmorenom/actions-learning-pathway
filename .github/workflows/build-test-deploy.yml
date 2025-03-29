@@ -58,6 +58,9 @@ jobs:
       - run: npm install
       - run: npm run build
       - run: npm run export
+
+      - name: List output directory (debugging)
+        run: ls -la ./out
         
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
